@@ -1,0 +1,77 @@
+let Data = [
+    {
+    "Tech_Questions": [
+        {
+            "question": "What does HTML stand for?",
+            "answers": [
+                "HyperText Markup Language",
+                "High Tech Markup Language",
+                "Hyperlink and Text Markup Language",
+                "HyperTransfer Markup Language"
+            ]
+        },
+        {
+            "question": "What is the main purpose of a constructor in object-oriented programming?",
+            "answers": [
+                "To destroy objects",
+                "To create objects",
+                "To override methods",
+                "To manage data types"
+            ]
+        },
+        {
+            "question": "What is the difference between '==' and '===' operators in JavaScript?",
+            "answers": [
+                "'==' compares values, while '===' compares values and types.",
+                "'==' compares values and types, while '===' compares only values.",
+                "There is no difference; they are used interchangeably.",
+                "'==' compares only values, while '===' compares values and types."
+            ]
+        },
+        {
+            "question": "Which tag is used to create a line break in HTML?",
+            "answers": [
+                "<br>",
+                "<lb>",
+                "<break>",
+                "<linebreak>"
+            ]
+        }
+    ],
+    "English_Questions": [
+        {
+            "question": "Our father __ dinner for us every day.",
+            "answers": ["cook", "coocked", "cooks", "cooking"]
+        },
+        {
+            "question": "These cars __ beautiful, but the price __ too high.",
+            "answers": ["is-is", "is-are", "are-are", "are-is"]
+        },
+        {
+            "question": "Mr Kelley __ to church every Sunday.",
+            "answers": ["go", "going", "goes", "goed"]
+        },
+        {
+            "question": "An hour ago, our train __ at platform 6.",
+            "answers": ["arrive", "arriving", "arrived", "arrivd"]
+        }
+    ],
+    "IQ_Questions": [
+        {
+            "question": "A bat and a ball together cost $1.10. The bat costs $1 more than the ball. How much does the ball cost?",
+            "answers": ["$0.10", "$0.05", "$1.00", "$0.90"]
+        },
+        {
+            "question": "How many months have 28 days?",
+            "answers": ["Only February", "All 12 months", "Only January", "None, it's a trick question"]
+        },
+        {
+            "question": "If you divide 30 by half and then add ten, what do you get?",
+            "answers": ["5", "20", "25", "70"]
+        },
+        {
+            "question": "A farmer has 15 cows. All but 8 die. How many are left?",
+            "answers": ["7", "15", "8", "0"]
+        }
+    ]
+}]

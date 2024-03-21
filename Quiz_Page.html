@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Quiz_Page.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="">
+    <title>Quiz | SmartTech</title>
+</head>
+<body>
+    <div class="Big-Pa">
+
+
+        <section class="audio-hidding">
+            <audio id="countdownSound">
+                <source src="audios/kitchen-timer.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="bell-ring-sound">
+                <source src="audios/bell-ring.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="last-10-seconds">
+                <source src="audios/last_10_seconds.mp3" type="audio/mpeg">
+            </audio>
+        </section>
+
+        <section class="Top-section">
+            <p id="Questions-Id"> Question <span id="Ques-numbe_id"> 1</span><span>/16</span></p>
+            <div class="timer_div">
+            <img id="counter-id" src="Images/Counter.png" alt="counter_image">
+            <div class="timer-keyword">
+                <p id="timer-Display">22</p>
+                <p id="sec-keyword">sec</p>
+            </div>
+
+            </div>
+        </section>
+
+        <main class="progress-and-whiteBoard">
+            <div  class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                <div id="progressId"  class="progress-bar progress-bar-striped progress-bar-animated" style="width: 6.25% ; background-color:#1DAC00;"></div>
+            </div>
+            <div class="white-board">
+                <div id="question-area-id">
+                    <p id="the-Question_id-display"> What does the 'transition' property in CSS control? </p>
+                </div>
+                <div id="inputs-area-id">
+                    <div id="input-1">
+                   <form >
+                        <button class="button-1"  id="Q-answer-1" name="omare" class="buttonInput1" value="1">A</button>
+                        <label id="label-1" for="Q-1-answer-1">Animation</label><br>
+                    </div>
+                    <div id="input-2">
+                            <button class="button-2"  id="Q-answer-2" name="#" class="buttonInput2"  value="-1">B</button>
+                            <label id="label-2" for="Q-1-answer-2">Transformation</label><br>
+                    </div>
+                    <div id="input-3">
+                            <button class="button-3"  id="Q-answer-3" name="#" class="buttonInput3"  value="-1">C</button>
+                            <label id="label-3" for="Q-1-answer-3">Interaction</label><br>
+                    </div>
+                    <div id="input-4">
+                            <button class="button-4"  id="Q-answer-4" name="#" class="buttonInput4" value="-1">D</button>
+                            <label id="label-4" for="Q-1-answer-4">Styling</label><br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <section class="Bottom-section">
+            <button id="button_Id" class="button-next" role="button">Next</button>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+<script src="Quiz_Page.js"></script>    
+</body>
+</html>
