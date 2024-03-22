@@ -261,6 +261,7 @@ Next_button_Dom.addEventListener('click',function(){
           break;
         case 13 :
             the_Question_id_display_Dom.innerHTML =`${Data.IQ_Questions[1].question}`;
+ 
             label_1_Dom.innerHTML =`${Data.IQ_Questions[1].answers[0]}`;
             label_2_Dom.innerHTML =`${Data.IQ_Questions[1].answers[1]}`;
             label_3_Dom.innerHTML =`${Data.IQ_Questions[1].answers[2]}`;
@@ -281,3 +282,92 @@ Next_button_Dom.addEventListener('click',function(){
             label_4_Dom.innerHTML =`${Data.IQ_Questions[3].answers[3]}`;
           break;
     }
+
+
+
+                                         /********************************************/
+//                                                    A N I M A T I O N 
+
+//Progress Bar Logic 
+ 
+let progress_Dom = document.getElementById("progressId"); // DOM by id 
+
+let Actu_width = parseFloat(progress_DOM.style.width) || 0; //return fallback 0 if the width:inherit or insitial
+let Nouv_width = `${Actu_width + 6.25}%`
+progress_DOM.style.width= Nouv_width; //mise a jour du width 
+
+
+// logic changer num du Question 
+
+let Question_numbe_Dom = document.getElementById("Ques-numbe_id"); // DOM by id 
+
+let nextNum = parseInt(Question_numbe_Dom.innerHTML) + 1;
+if(nextNum <= 16){
+    Question_numbe_Dom.innerHTML = nextNum ;
+}
+else{
+    nextNum = 16 ;
+}
+
+// Time 
+const countDownDom = document.getElementById("timer-Display");
+let countdownSound_dom = document.getElementById("countdownSound");
+let bell_ring_sound_dom = document.getElementById("bell-ring-sound");
+let last_10_seconds_dom = document.getElementById("last-10-seconds");
+
+
+let colorToggle = true 
+let startingMinutes = 1 ;
+let time = startingMinutes * 60 // conv en sec
+
+setInterval(updateCounterDown , 1000);
+
+function updateCounterDown(){
+    let minutes = Math.floor(time/60);
+    let secondes = time % 60;
+
+    secondes = secondes <10 ? "0" + secondes : secondes ;
+    countDownDom.innerHTML = `${secondes}`;
+    countdownSound_dom.play();
+    if(time>0){
+        time -- ;
+    } else {
+        clearInterval();
+        countdownSound_dom.pause();
+        setTimeout(function(){
+            bell_ring_sound_dom.pause();
+        },3000)
+    }
+
+    // changer la couleur du chrono si time <10 (Toggle red - black)
+    if(time <= 10 && time > 0 ){
+        last_10_seconds_dom.play();
+
+        setTimeout(function(){last_10_seconds_dom.pause();},10000)
+        if(colorToggle){
+            countDownDom.style.color = 'red' ; 
+            colorToggle = false ;
+        }
+        else{
+            countDownDom.style.color = 'black' ;
+            colorToggle = true ;
+        }
+
+    } else{
+        countDownDom.style.color = 'black' ; 
+        colorToggle = true ; 
+    }
+
+    // image Rotation conteur 
+
+let counter_image_dom = document.getElementById("counter-id");
+
+counter_image_dom.style.transition = 'transform 58s linear';
+counter_image_dom.style.transform = rotate(4000deg); // all 360° 
+
+
+
+
+    
+
+}
