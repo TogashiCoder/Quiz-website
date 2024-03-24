@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Satisfy&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.audio-hidding{
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.big-pa{
+    background-image: linear-gradient(to right, #BEDC98 0%, 24.064171314239502%, #9DD7A7 48.128342628479004%, 73.01587301587301%, #6FD0B7 100%);
+    width: 100%;
+    min-height: 100vh;
+    z-index: -100;
+}
+
+#left-light ,#center-light ,#right-light
+{
+    width: 400px;
+}
+
+#congratulationsMessage{
+    font-family: "Satisfy", cursive;
+    font-size: 150px;
+    position: relative;
+    left: 320px;
+    top: -500px;
+}
+
+
+.spot-lights{
+    display: flex;
+    justify-content:space-between;
+}
+
+.character-zoon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -400px;
+}
+
+#cup{
+    width: 330px;
+    z-index: 2;
+    position: relative;
+    top: 65px;
+    left: -120px;
+    animation-name: cupAnimation;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.5s;
+    animation-direction:alternate;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cupAnimation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(15deg);
+    }
+}
+
+#character{
+    width: 300px;
+    position: relative;
+    top: -200px;
+    left: -50px;
+    z-index: 1;
+}
+#stage{
+    width: 650px;
+    position: relative;
+    top: -250px;
+}
+
+#left-light {
+    transform-origin: top left;
+    animation: left-light-animation 3s linear infinite alternate; 
+  }
+@keyframes left-light-animation {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-30deg);
+    }
+  }
+
+
+
+#center-light{
+  
+  transform-origin: 50% 0%;
+  animation: center-light-animation 10s linear infinite;
+  animation-delay: 0.5s;
+  
+}
+@keyframes center-light-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    20% {
+      transform: rotate(30deg);
+    }
+    40% {
+      transform: rotate(-30deg);
+    }
+    60% {
+      transform: rotate(30deg);
+    }
+    80% {
+      transform: rotate(-30deg);
+    }
+    100% {
+      transform: rotate(30deg);
+    }
+}
+#right-light{
+    transform-origin: top right; 
+    animation: right-light-animation 3s linear infinite alternate;
+   
+}
+
+
+@keyframes right-light-animation {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(30deg);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
